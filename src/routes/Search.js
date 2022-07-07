@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import SearchMovie from './SearchMovie';
+import SearchMovie from '../components/SearchMovie';
 
 class Search extends React.Component {
   state = {
