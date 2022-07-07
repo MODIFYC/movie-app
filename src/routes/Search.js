@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import SearchMovie from '../components/SearchMovie';
+import styles from './Search.module.css';
+// import Detail from './Detail';
 
 class Search extends React.Component {
   state = {
@@ -67,14 +69,14 @@ class Search extends React.Component {
           </div>)
           : (<form onSubmit={this.handleSubmit}>
             <div>
-              <div className="input_div">
-                <h1>영화 검색</h1>
-                <input className="input_search" type="text" value={this.state.value} onChange={this.handleChange} placeholder="영화를 검색해 보세요."/>
+              <div className={styles.input_div}>
+                {/* <h1>영화 검색</h1> */}
+                <input className={styles.input_search} type="text" value={this.state.value} onChange={this.handleChange} placeholder="영화를 검색해 보세요."/>
               </div>
-              <div className="movies">
+              <div className={styles.movies}>
                 {movies.map(movie => (
                 	<SearchMovie key={movie.link} id={movie.link} year={movie.pubDate} title={movie.title} poster={movie.image} rating={movie.userRating} director={movie.director} actor={movie.actor}
-					/>))
+					        />))
                  }
               </div>
             </div>
