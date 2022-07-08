@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./routes/Home";
 import Search from "./routes/Search";
 import Detail from './routes/Detail';
+import RankKofic from './routes/RanckKofic';
 
 function App () {
   return (
@@ -11,12 +12,19 @@ function App () {
         <Route path="/search">
           <Search />
         </Route>
-        <Route path="/movie">
+        <Route path="/detail">
           <Detail />
+        </Route>
+        <Route path="/rank">
+          <RankKofic />
+        </Route>
+        <Route path="/test">
+          <RankKofic />
         </Route>
         <Route path="/">
           <Home />
         </Route>
+        
       </Switch>
       {/* <Switch>
         <Route path="/" exact={true} component={Home}></Route>
