@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import axios from 'axios';
 import moment from 'moment';
 
 function RankKofic() {
@@ -6,21 +7,20 @@ function RankKofic() {
   const DATE = moment().format('YYYYMMDD');
   const [loading,setLoading] = useState(true);
   const [movies,setMovies] = useState([])
-  const getMovies = async() => {
-    const json = await (
-       await fetch(
-      `http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=${KEY}&targetDt=${DATE}`
-    )
-    ).json();
-    setMovies(json.boxOfficeResult.dailyBoxOfficeList);
-    setLoading(false);
-  }
 
   useEffect(() => {
-   getMovies();
+    const getMovies = async() => {
+      const json = await (
+        await axios.get(
+          `http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=${KEY}&targetDt=${DATE}`
+        )
+      ).json();
+      setMovies(json.boxOfficeResult.dailyBoxOfficeList);
+      setLoading(false);
+    }
   }, [])
   
-  console.log();
+  console.log('hi');
 
   return (
     <div>

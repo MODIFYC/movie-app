@@ -4,6 +4,7 @@ import Home from "./routes/Home";
 import Search from "./routes/Search";
 import Detail from './routes/Detail';
 import RankKofic from './routes/RanckKofic';
+import Test from './routes/Test';
 
 function App () {
   return (
@@ -19,7 +20,7 @@ function App () {
           <RankKofic />
         </Route>
         <Route path="/test">
-          <RankKofic />
+          <Test />
         </Route>
         <Route path="/">
           <Home />

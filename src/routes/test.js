@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-class test extends React.Component {
+class Test extends React.Component {
  state = {
    isLoading: true,
    movies: [],
@@ -34,4 +34,4 @@ class test extends React.Component {
  }
 }
 
-export default test;
+export default Test;
