@@ -6,6 +6,8 @@
 .pnp.js
 .git
 
+/reference
+
 # testing
 /coverage
 

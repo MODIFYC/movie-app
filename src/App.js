@@ -4,6 +4,7 @@ import Home from "./routes/Home";
 import Search from "./routes/Search";
 import Detail from './routes/Detail';
 import RankKofic from './routes/RanckKofic';
+import RankNaver from './routes/RankNaver';
 
 function App () {
   return (
