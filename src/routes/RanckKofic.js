@@ -4,7 +4,7 @@ import moment from 'moment';
 
 function RankKofic() {
   const KEY1 = "06fe7383576234f02a83e4993c927e1f"  //영화진흥위원회
-  const KEY2 = "80HF21BI401E15RFQ193"    //KMDB(인증키 검토 중)
+  const KEY2 = "80HF21BI401E15RFQ193"    //KMDB
   const DATE = moment().subtract(1, 'day').format('YYYYMMDD');
   const [loading,setLoading] = useState(true);
   const [movies,setMovies] = useState([]);
